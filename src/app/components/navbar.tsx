@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image"
 import React, { useState } from "react";
+import Link from "next/link";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -49,25 +50,25 @@ export default function Navbar() {
           }`}
         >
           <a
-            href="#home"
+            href="/"
             className="block md:inline-block px-4 py-2 md:py-0 hover:underline transition duration-200 ease-in-out hover:text-blue-400"
           >
             Home
           </a>
-          <a
-            href="#products"
+          {/* <a
+            href="/components/product"
             className="block md:inline-block px-4 py-2 md:py-0 hover:underline transition duration-200 ease-in-out hover:text-blue-400"
           >
             Products
-          </a>
-          <a
-            href="#about"
+          </a> */}
+          <Link
+            href="/about"
             className="block md:inline-block px-4 py-2 md:py-0 hover:underline transition duration-200 ease-in-out hover:text-blue-400"
           >
             About
-          </a>
+          </Link>
           <a
-            href="#contact"
+            href="/contact"
             className="block md:inline-block px-4 py-2 md:py-0 hover:underline transition duration-200 ease-in-out hover:text-blue-400"
           >
             Contact

@@ -1,4 +1,6 @@
-export default {
+// some changes in this file in store schema in variable
+
+const productSchema =  {
     name: 'product',
     type: 'document',
     title: 'Product',
@@ -71,3 +73,5 @@ export default {
       }
     ]
   };
+
+  export default productSchema

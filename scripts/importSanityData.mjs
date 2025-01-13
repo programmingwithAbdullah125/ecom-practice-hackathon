@@ -34,7 +34,7 @@ async function uploadImageToSanity(imageUrl) {
 async function importData() {
   try {
     console.log('Fetching products from API...')
-    const response = await axios.get('https://fakestoreapi.com/products')
+    const response = await axios.get('https://677ef86d0476123f76a51846.mockapi.io/test')
     const products = response.data
     console.log(`Fetched ${products.length} products`)
     for (const product of products) {
