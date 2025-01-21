@@ -17,7 +17,7 @@ const productSchema =  {
       },
       {
         name: 'price',
-        type: 'number',
+        type: 'string',
         title: 'Product Price',
       },
       {
@@ -53,16 +53,16 @@ const productSchema =  {
         },
         description: 'Add tags like "new arrival", "bestseller", etc.'
       },
-      {
-        name: 'sizes',
-        type: 'array',
-        title: 'Sizes',
-        of: [{ type: 'string' }],
-        options: {
-          layout: 'tags'
-        },
-        description: 'Add sizes like S , M , L , XL , XXL'
-      },
+      // {
+      //   name: 'sizes',
+      //   type: 'array',
+      //   title: 'Sizes',
+      //   of: [{ type: 'string' }],
+      //   options: {
+      //     layout: 'tags'
+      //   },
+      //   description: 'Add sizes like S , M , L , XL , XXL'
+      // },
       {
         name: 'image',
         type: 'image',

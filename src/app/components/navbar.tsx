@@ -17,7 +17,7 @@ export default function Navbar() {
             width={45}
             className=" rounded-full"
           />
-          <span className="text-xl font-bold tracking-wide">PWA ShopHub</span>
+          <span className="text-xl font-bold tracking-wide">PWA Fragrance Hub</span>
         </div>
 
         {/* Hamburger Menu for Mobile */}
