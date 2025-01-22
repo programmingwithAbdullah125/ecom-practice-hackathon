@@ -10,5 +10,9 @@ export interface Product {
         }
     };
     price : number;
-    deccription? : string;
+    description? : string;
+    slug : {
+        _type : "slug";
+        current : string
+    }
 }

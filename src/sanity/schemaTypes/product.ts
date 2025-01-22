@@ -1,4 +1,6 @@
-// some changes in this file in store schema in variable
+// // some changes in this file in store schema in variable
+
+import { defineField } from "sanity";
 
 const productSchema =  {
     name: 'product',
@@ -10,6 +12,16 @@ const productSchema =  {
         type: 'string',
         title: 'Product Name',
       },
+      defineField({
+      name: "slug",
+      type: "slug",
+      title: "Slug",
+      options : {
+        source : "name",
+        maxLength: 200,
+      }
+      }
+    ),
       {
         name: 'description',
         type: 'string',
@@ -20,17 +32,17 @@ const productSchema =  {
         type: 'string',
         title: 'Product Price',
       },
-      {
-        name: 'discountPercentage',
-        type: 'number',
-        title: 'Discount Percentage',
-      },
-      {
-        name: 'priceWithoutDiscount',
-        type: 'number',
-        title: 'Price Without Discount',
-        description: 'Original price before discount'
-      },
+      // {
+      //   name: 'discountPercentage',
+      //   type: 'number',
+      //   title: 'Discount Percentage',
+      // },
+      // {
+      //   name: 'priceWithoutDiscount',
+      //   type: 'number',
+      //   title: 'Price Without Discount',
+      //   description: 'Original price before discount'
+      // },
       {
         name:'rating',
         type:'number',

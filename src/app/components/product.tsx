@@ -5,6 +5,7 @@ import { Product } from "../../../types/products"
 import client from "@/sanity/lib/client"
 import { allProducts, four } from "@/sanity/lib/queries"
 import { urlFor } from "@/sanity/lib/image"
+import Link from "next/link"
 const Products = () => {
     const [product, setProduct] = useState<Product[]>([])
     useEffect(() => {
@@ -25,11 +26,12 @@ const Products = () => {
              key={product._id}
              className="border rounded-lg shadow-md p-4 hover:shadow-lg transition duration-200"
              >
+                <Link href={`/product/${product.slug.current}`}>
                 {product.image && (
                     <Image
                         src={urlFor(product.image).url()}
                         width={200}
-                        height={200}
+                        height={500}
                         className="w-full h-48 object-cover rounded-md"
                         alt="image"/>
 
@@ -38,6 +40,7 @@ const Products = () => {
                <p className="text-gray-500 mt-2">
                  {product.price ? `${product.price}` : "price not available"}
                </p>
+               </Link>
             </div>
 
         ))}
