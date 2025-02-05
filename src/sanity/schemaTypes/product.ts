@@ -1,5 +1,6 @@
 // // some changes in this file in store schema in variable
 
+import { title } from "process";
 import { defineField } from "sanity";
 
 const productSchema =  {
@@ -43,6 +44,11 @@ const productSchema =  {
       //   title: 'Price Without Discount',
       //   description: 'Original price before discount'
       // },
+      {
+        name: 'inventory',
+        title: 'Inventory',
+        type: 'number' 
+      },
       {
         name:'rating',
         type:'number',

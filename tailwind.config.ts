@@ -8,12 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        sans:["Geist Sans", "sans-serif"],
+        mono:["Geist Mono","monospace"],
       },
     },
   },
   plugins: [],
 };
 export default config;
+
